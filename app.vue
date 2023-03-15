@@ -1,8 +1,5 @@
 <script setup>
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'fork-corner/dist/fork-corner.css';
 import { storeToRefs } from 'pinia';
-import initForkCorner from '~/fork-corner';
 import AppSidebar from '~/components/AppSidebar.vue';
 import { useAppStore } from '~/stores/app';
 import { useConversationsStore } from '~/stores/conversations';
@@ -29,19 +26,9 @@ useHead({
     ],
 });
 
-onMounted(() => {
-    initForkCorner();
-});
 </script>
 
 <template>
-    <a
-        href="https://github.com/waylaidwanderer/PandoraAI"
-        target="_blank"
-        id="fork-corner"
-        class="fork-corner fc-size-small fc-pos-tr fc-animate fc-theme-github"
-        title="Fork me on GitHub"
-    ></a>
     <div class="flex flex-row min-h-screen text-slate-300">
         <AppSidebar/>
         <Transition name="fade">
@@ -136,23 +123,6 @@ footer a {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-}
-
-#fork-corner {
-    z-index: 41;
-    top: 5px !important;
-    right: 5px !important;
-}
-
-.fork-corner.fc-theme-github + div {
-    top: -88px !important;
-    right: -88px !important;
-    @apply shadow bg-black/50 z-40;
-}
-
-.fork-corner.fc-theme-github > i {
-    @apply text-white/80;
-    font-size: 35px !important;
 }
 
 ::-webkit-scrollbar {

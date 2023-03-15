@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    port: 9000,
     ssr: false,
     runtimeConfig: {
         public: {

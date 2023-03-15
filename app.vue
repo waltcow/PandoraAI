@@ -20,7 +20,7 @@ const {
 } = storeToRefs(conversationsStore);
 
 useHead({
-    title: `${conversationTitle.value} - PandoraAI`,
+    title: `${conversationTitle.value} - ChatGPT`,
     meta: [
         {
             name: 'viewport',
@@ -87,18 +87,13 @@ onMounted(() => {
                     />
                 </button>
                 <!-- Title -->
-                <h1 class="text-2xl font-bold text-white/80 drop-shadow-md">Pandora<span class="font-light">AI</span></h1>
+                <h1 class="text-2xl font-bold text-white/80 drop-shadow-md">ChatGPT <span class="font-light">4</span></h1>
             </header>
             <main class="flex flex-grow py-2">
                 <Chat/>
             </main>
             <footer class="px-3 pb-6 text-center">
-                <span class="text-xs font-light text-slate-400">
-                    powered by
-                    <a href="https://github.com/waylaidwanderer/node-chatgpt-api" target="_blank">
-                        https://github.com/waylaidwanderer/node-chatgpt-api
-                    </a>
-                </span>
+                <span class="text-xs font-light text-slate-400">powered by Polpo.Inc </span>
             </footer>
         </div>
     </div>

@@ -70,6 +70,11 @@ const inputRows = computed(() => {
     return Math.min(newlines + 1, 7);
 });
 
+const setActivePresetNameAndHide = (presetName) => {
+    setActivePresetName(presetName);
+    isClientDropdownOpen.value = false;
+};
+
 const scrollToBottom = () => {
     messagesContainerElement.value.scrollTop = messagesContainerElement.value.scrollHeight;
 };
@@ -446,7 +451,7 @@ if (!process.server) {
                     <ClientDropdown
                         v-if="isClientDropdownOpen"
                         :preset-name="activePresetNameToUse"
-                        :set-client-to-use="setActivePresetName"
+                        :set-client-to-use="setActivePresetNameAndHide"
                         :set-is-client-settings-modal-open="setIsClientSettingsModalOpen"
                     />
                 </Transition>
